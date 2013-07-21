@@ -315,5 +315,5 @@ These elements are automatically sized by the <code>.m-fluid</code> class to be 
 
 <!-- <script src="http://zeptojs.com/zepto.js"></script> -->
 <script src="http://code.jquery.com/jquery-1.10.1.js"></script>
-<script src="src/scooch.js"></script>
+<script src="//cdn.mobify.com/modules/scooch/0.3.0/scooch.min.js"></script>
 <script>$('.m-scooch').scooch();</script>
