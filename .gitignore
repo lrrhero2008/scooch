@@ -1,0 +1,8 @@
+node_modules/
+
+npm-debug.log
+
+localConfig.json
+build
+
+/_site/
