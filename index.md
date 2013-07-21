@@ -10,7 +10,7 @@ description:
 
 A mobile-first content and image carousel.
 
-## Usage
+## <a id="usage">Usage</a>
 
     <!-- include scooch.css -->
     <link rel="stylesheet" href="scooch.css">
@@ -48,25 +48,7 @@ A mobile-first content and image carousel.
     <!-- construct the carousel -->
     <script>$('.m-scooch').scooch()</script>
 
-
-## Classes
-
-By default, items are center aligned and their width is determined by
-their content width and/or any styling that restricts their width.
-
-To change the styling of the items, add the following classes to the
-viewport:
-
-
-| Class       | Description                                            |
-|-------------|---------------------------------------------------------
-| `.m-fluid`  | Causes the width of items to resize to match the viewport width. |
-| `.m-center` | Causes the items to be center aligned, not left aligned (the default). |
-
-
-
-
-## Methods
+## <a id="methods">Methods</a>
 
 ### .scooch(options)
 
@@ -124,7 +106,22 @@ Removes the carousel and its event handlers from the DOM.
     $('.m-scooch').scooch('destroy');
 
 
-## Events
+## <a id="class-names">Classes</a>
+
+By default, items are center aligned and their width is determined by
+their content width and/or any styling that restricts their width.
+
+To change the styling of the items, add the following classes to the
+viewport:
+
+
+| Class       | Description                                            |
+|-------------|---------------------------------------------------------
+| `.m-fluid`  | Causes the width of items to resize to match the viewport width. |
+| `.m-center` | Causes the items to be center aligned, not left aligned (the default). |
+
+
+## <a id="events">Events</a>
 
 The viewport emits the following events:
 
@@ -133,7 +130,7 @@ The viewport emits the following events:
 | beforeSlide   | previousIndex, newIndex   | Fired before the carousel moves.          |
 | afterSlide    | previousIndex, newIndex   | Fired after the carousel begins moving.   |
 
-## Browser Compatibility
+## <a id="browser-support>Browser Compatibility</a>
 
 ### Mobile Browsers
 
