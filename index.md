@@ -1,239 +1,185 @@
 ---
 layout: base
-title: Responsive, Mobile first accordion UI module
+title: Responsive, Mobile-first carousel
 description:
-    Learn about the Bellows module, an expanding bellows menu for
-    two-level navigation systems.
+    Learn about the Scooch module, a sliding carousel for images and other 
+    content.
 ---
 
-# Bellows
+# Scooch
 
-A responsive, mobile-first accordion UI module for progressive disclosure on the web.
+A mobile-first content and image carousel.
 
-<ul class="m-bellows">
-    <li class="m-item">
-        <h3 class="m-header">
-            <a>Tab1</a>
-        </h3>
-        <div class="m-content">
-            <div class="m-inner-content">
-                <h2>Content 1</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui icia deserunt mollit anim id est laborum.</p>
-            </div>
+## Usage
+
+    <!-- include scooch.css -->
+    <link rel="stylesheet" href="scooch.css">
+    <link rel="stylesheet" href="scooch-style.css">
+
+    <!-- the viewport -->
+    <div class="m-scooch m-fluid m-scooch-photos">
+      <!-- the slider -->
+      <div class="m-scooch-inner">
+        <!-- the items -->
+        <div class="m-item m-active">
+          <img src="image1.jpg">
         </div>
-    </li>
-    <li class="m-item">
-        <h3 class="m-header">
-            <a>Tab2</a>
-        </h3>
-        <div class="m-content">
-            <div class="m-inner-content">
-                <h2>Content 2</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            </div>
+        <div class="m-item">
+          <img src="image2.jpg">
         </div>
-    </li>
-    <li class="m-item">
-        <h3 class="m-header">
-            <a>Tab3</a>
-        </h3>
-        <div class="m-content">
-            <div class="m-inner-content">
-                <h2>Content 3</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui icia deserunt mollit anim id est laborum.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui icia deserunt mollit anim id est laborum.</p>
-            </div>
+        <div class="m-item">
+          <img src="image3.jpg">
         </div>
-    </li>
-</ul>
-
-<div class="btn-container actions">
-	<a href="http://cdn.mobify.com/modules/bellows/0.3.0/bellows.zip" class="btn btn-primary">Download Bellows</a>
-	<ul>
-        <li><a href="{{ site.baseurl }}examples">See more examples</a></li>
-	    <li><a href="https://github.com/mobify/bellows">View the Github repo</a></li>
-    </ul>
-    <p>This module is also hosted on Mobify's CDN:</p>
-    <p><u>CSS</u></p>
-    <pre><code class="xml">&lt;link rel="stylesheet" href="http://cdn.mobify.com/modules/bellows/0.2.0/bellows.min.css">
-&lt;link rel="stylesheet" href="http://cdn.mobify.com/modules/bellows/0.3.0/bellows-style.min.css"></code></pre>
-    <p><u>JavaScript</u></p>
-    <pre><code class="xml">&lt;script src="http://cdn.mobify.com/modules/bellows/0.3.0/bellows.min.js"></script></code></pre>
-</div>
-
-
-## Usage<a id="usage"></a>
-
-    <!-- include bellows.css -->
-    <link rel="stylesheet" href="http://cdn.mobify.com/modules/bellows/0.3.0/bellows.min.css">
-    <link rel="stylesheet" href="http://cdn.mobify.com/modules/bellows/0.3.0/bellows-style.min.css">
-
-    <!-- the markup -->
-	<ul class="m-bellows">
-	  <!-- the items -->
-	  <li class="m-item">
-	    <h3 class="m-header">
-	      <!-- header title -->
-	      <a>Tab1</a>
-	    </h3>
-        <div class="m-content">
-          <div class="m-inner-content">
-            <!-- content for item -->
-            <h2>Content 1</h2>
-            <h2>Lorem Ipsum</h2>
-          </div>
-        </div>
-	  </li>
-      <li class="m-item">
-        <h3 class="m-header">
-          <a>Tab2</a>
-        </h3>
-        <div class="m-content">
-          <div class="m-inner-content">
-            <h2>Content 2</h2>
-            <p>Lorem Ipsum</p>
-          </div>
-        </div>
-      </li>
-	  <li class="m-item">
-	    <h3 class="m-header">
-	      <a>Tab3</a>
-	    </h3>
-	    <div class="m-content">
-	      <div class="m-inner-content">
-	        <h2>Content 3</h2>
-	        <p>Lorem Ipsum</p>
-	      </div>
-	    </div>
-	  </li>
-	</ul>
+      </div>
+      <!-- the controls -->
+      <div class="m-scooch-controls m-scooch-bulleted">
+        <a href="#" data-slide="prev">Previous</a>
+        <a href="#" data-slide="1" class="m-active">1</a>
+        <a href="#" data-slide="2">2</a>
+        <a href="#" data-slide="3">3</a>
+        <a href="#" data-slide="next">Next</a>
+      </div>
+    </div>
 
     <!-- include zepto.js or jquery.js -->
-    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
-    <!-- include bellows.js -->
-    <script src="http://cdn.mobify.com/modules/bellows/0.3.0/bellows.min.js"></script>
-    <!-- construct the bellows -->
-    <script>$('.m-bellows').bellows()</script>
+    <script src="zepto.js"></script>
+    <!-- include scooch.js -->
+    <script src="scooch.js"></script>
+    <!-- construct the carousel -->
+    <script>$('.m-scooch').scooch()</script>
 
-## Methods<a id="methods"></a>
 
-### bellows()
+## Classes
 
-Initializes the bellows.
+By default, items are center aligned and their width is determined by
+their content width and/or any styling that restricts their width.
 
-    $('.m-bellows').bellows();
+To change the styling of the items, add the following classes to the
+viewport:
 
-### bellows(options)
 
-Initialize with options.
+| Class       | Description                                            |
+|-------------|---------------------------------------------------------
+| `.m-fluid`  | Causes the width of items to resize to match the viewport width. |
+| `.m-center` | Causes the items to be center aligned, not left aligned (the default). |
 
-    $('.m-bellows').bellows({
-      {
-        ...
-        options (refer below)
-        ...
-      }
+
+
+
+## Methods
+
+### .scooch(options)
+
+Constructs the carousel with options.
+
+    $('.m-scooch').scooch({
+          dragRadius: 10
+        , moveRadius: 20
+        , classPrefix: undefined
+        , classNames: {
+            outer: "carousel"
+          , inner: "carousel-inner"
+          , item: "item"
+          , center: "center"
+          , touch: "has-touch"
+          , dragging: "dragging"
+          , active: "active"
+        }
     });
 
-### Storing bellows object for future use
+### .scooch('next')
 
-    var $bellows = $(".m-bellows"); // A Zepto element array is returned
-    var bellows = $bellows[0].bellows; // We access the appropriate bellows from the above array
+Moves the carousel one item to the right.
 
-### unbind()
+    $('.m-scooch').scooch('next');
 
-Removes any tap, mouse, and other event handlers from the bellows.
+### .scooch('prev')
 
-    bellows.unbind();
+Moves the carousel one item to the left.
 
-### bind()
+    $('.m-scooch').scooch('prev');
 
-Restores the tap, mouse, and other event handlers for the bellows.
+### .scooch('move', x)
 
-    bellows.bind();
+Moves the carousel to a index `x` (1-based).
 
-### destroy()
+    $('.m-scooch').scooch('move', 1);
 
-Unbinds the events from the bellows, and removes it from the DOM.
+### .scooch('unbind')
 
-    bellows.destroy(); // destroys the DOM element and the jQuery bindings
-    bellows = null; // destroys the Mobify bellows object as well
+Removes event handlers bound on the carousel.
 
-### open($item)
+    $('.m-scooch').scooch('unbind');
 
-Open the selected bellows item
+### .scooch('bind')
 
-    bellows.open($(".m-item").eq(2));
+Binds the event handlers on the carousel.
 
-### close($item)
-    
-Close the selected bellows item
+    $('.m-scooch').scooch('bind');
 
-    bellows.close($("#some-item"));
+### .scooch('destroy')
 
-### recalculateItemHeight($item)
+Removes the carousel and its event handlers from the DOM.
 
-Recalculate the heights of bellows item elements. This is used when the heights of the content have changed after creation of the bellows.
-
-    bellows.recalculateItemHeight($(".m-item"));
-
-## Class names<a id="class-names"></a>
-
-Set the class names for the different elements, if deviating from the defaults.
-  
-    $(".m-bellows").bellows({
-      closedClass: 'm-closed',
-      openedClass: 'm-opened',
-      activeClass: 'm-active',
-      contentClass: 'm-content',
-      innerContentClass: 'm-inner-content',
-      headerClass: 'm-header',
-      itemClass: 'm-item'
-    });
-
-## Event hooks<a id="event-hooks"></a>
-
-### onTransitionDone: functionName
-
-Execute this function every time the selected bellows item is opened or closed.
-
-    $(".m-bellows").bellows({
-        onTransitionDone: function() { console.log("Animation done"); }
-    });
-
-### onOpened: functionName
-
-Execute this function every time the selected bellows item is opened.
-
-    $(".m-bellows").bellows({
-        onOpened: function() { console.log("Opened"); }
-    });
-
-### onClosed: functionName
-
-Execute this function every time an bellows item is closed
-    
-    $(".m-bellows").bellows({
-        onClosed: function() { console.log("Closed"); }
-    });
-
-## Browser Support<a id="browser-support"></a>
+    $('.m-scooch').scooch('destroy');
 
 
-| Browser           | Version | Support                    |
-|-------------------|---------|----------------------------|
-| Safari            | 4.0+    | Supported.                 
-| Firefox           | 3.5-3.6 | Degraded. No transitions.  
-| Firefox           | 4.0+    | Supported                  
-| Chrome            | 9.0+    | Supported                  
-| Opera             | 12.0+   | Supported.                 
-| Internet Explorer | 6-7.0   | Not Supported              
-| Internet Explorer | 8.0     | Degraded. No transitions.  
-| Internet Explorer | 9.0     | Degraded. No transitions.  
-| Internet Explorer | 10.0    | Supported                  
-| Mobile Safari     | 3.1.*   | Degraded. No transitions   
-| Mobile Safari     | 4.0+    | Supported                  
-| Android Browser   | 2.1+    | Supported                  
-| Chrome (Android)  | 1.0+    | Supported                  
-| Firefox (Android) | 1.0+    | Supported                  
-| Windows Phone     | 7.5     | Degraded. No transitions.  
+## Events
+
+The viewport emits the following events:
+
+| Name          | Arguments                 | Description                               |
+|---------------|---------------------------|-------------------------------------------|
+| beforeSlide   | previousIndex, newIndex   | Fired before the carousel moves.          |
+| afterSlide    | previousIndex, newIndex   | Fired after the carousel begins moving.   |
+
+## Browser Compatibility
+
+### Mobile Browsers
+
+The following mobile browsers are fully supported:
+
+| Browser           | Version |
+|-------------------|---------|
+| Mobile Safari     | 3.1.3+  |
+| Android Browser   | 2.1+    |
+| Android Chrome    | 1.0+    |
+| Android Firefox   | 1.0+    |
+
+The following mobile browsers have degraded support:
+
+| Browser           | Version |
+|-------------------|---------|
+| Windows Phone     | 7.5     |
+
+### Desktop Browsers
+
+The follow desktop browsers are fully supported:
+
+| Browser           | Version |
+|-------------------|---------|
+| Safari            | 4.0+    |
+| Firefox           | 4.0+    |
+| Chrome            | 12.0+   |
+| Opera             | 12.0+   |
+| Internet Explorer | 10.0+   |
+
+The following desktop browsers have degraded support:
+
+| Browser           | Version |
+|-------------------|---------|
+| Internet Explorer | 8.0,9.0 |
+| Firefox           | 3.5,3.6 |
+
+## Building
+### Requirements
+* [node.js 0.8.x/npm](http://nodejs.org/download/)
+
+### Steps
+1. `npm install -g grunt-cli`
+2. `npm install`
+3. `grunt`
+
+The build directory will be populated with minified versions of the css and 
+javascript files and a .zip of the original source files (for distribution and
+use with whatever build system you might use).
