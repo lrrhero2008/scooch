@@ -130,7 +130,7 @@ The viewport emits the following events:
 | beforeSlide   | previousIndex, newIndex   | Fired before the carousel moves.          |
 | afterSlide    | previousIndex, newIndex   | Fired after the carousel begins moving.   |
 
-## <a id="browser-support>Browser Compatibility</a>
+## <a id="browser-support">Browser Compatibility</a>
 
 ### Mobile Browsers
 
